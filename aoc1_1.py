@@ -9,3 +9,4 @@ for i in l:
 		print(i, 2020-i)
 		print(i*(2020-i))
 		exit(0)
+		#test test
