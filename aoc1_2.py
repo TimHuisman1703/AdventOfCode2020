@@ -6,9 +6,9 @@ for i in l:
 	for j in l:
 		if(i == j):
 			continue
-		if(i == 2000-j-i):
+		if(i == 2020-j-i):
 			continue
-		if(j == 2000-i-j):
+		if(j == 2020-i-j):
 			continue
 		if(l.count(2020-i-j) > 0):
 			print(i, j, 2020-i-j)
