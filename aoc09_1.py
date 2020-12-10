@@ -1,4 +1,4 @@
-file = open("aoc9_input.txt")
+file = open("aoc09_input.txt")
 l = [int(j) for j in file.read().split("\n")]
 file.close()
 
