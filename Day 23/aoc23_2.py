@@ -2,7 +2,7 @@ file = open("aoc23_input.txt")
 l = file.read().split("\n")
 file.close()
 
-class SLL:
+class Node:
 	def __init__(self, value, next):
 		self.value = value
 		self.next = next
@@ -22,9 +22,9 @@ cups_amount = 1000000
 cups_start = [int(j) for j in l[0]]
 
 cups = [None]*cups_amount
-cups[cups_amount-1] = SLL(cups_amount, None)
+cups[cups_amount-1] = Node(cups_amount, None)
 for i in range(cups_amount-2, -1, -1):
-	cups[i] = SLL(i+1, cups[i+1])
+	cups[i] = Node(i+1, cups[i+1])
 for i in range(len(cups_start)-1):
 	cups[cups_start[i]-1].set_next(cups[cups_start[i+1]-1])
 cups[cups_start[-1]-1].set_next(cups[len(cups_start) % cups_amount])
